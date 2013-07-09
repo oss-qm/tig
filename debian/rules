@@ -20,7 +20,7 @@ else
 endif
 
 configure:
-	autoreconf -fi
+	./autogen.sh
 
 config.status: configure
 	dh_testdir
@@ -50,7 +50,7 @@ clean:
 	rm -f tig.1 tig.1.html tigrc.5 tigrc.5.html
 	rm -f NEWS.html README.html
 	
-	dh_clean 
+	dh_clean
 
 install: build
 	dh_testdir
