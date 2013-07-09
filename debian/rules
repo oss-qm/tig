@@ -19,6 +19,9 @@ else
 	CFLAGS += -O2
 endif
 
+configure:
+	autoreconf -fi
+
 config.status: configure
 	dh_testdir
 	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) \
